@@ -10,9 +10,9 @@ Python library for manipulating WikiCommons Character Info and CEDICT.
 
 ## Installation
 
-chin-dict is available on PyPI at https://pypi.org/project/chinese-dict/0.2.0/
+chin-dict is available on PyPI at https://pypi.org/project/chin-dict/
 
-	pip install ChinDict
+	pip install chin-dict
 	
 ### Command line tools
 
