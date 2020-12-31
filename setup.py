@@ -16,7 +16,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
  
 setup(
     name="chin-dict",
-    packages=find_packages(),
+    packages=find_packages(exclude=("tests")),
     entry_points = {
         "console_scripts": ['chindict = chin_dict.chin_dict:main']
         },

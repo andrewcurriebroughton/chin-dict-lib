@@ -57,6 +57,27 @@ To see the character's radical, use -r flag
 	---------------------------------------------
 	金
 
+To see meanings of character's or characters' components, use -cm
+
+	chindict -cm 你好
+	-----------------------------
+	你 meaning(s):
+	['you (informal, as opposed to courteous 您[nin2])']
+
+	好 meaning(s):
+	['good', 'well', 'proper', 'good to', 'easy to', 'very', 'so', '(suffix indicating completion or readiness)', '(of two people) close', 'on intimate terms', '(after a personal pronoun) hello', 'to be fond of', 'to have a tendency to', 'to be prone to']
+
+To see meanings of character's or characters' radicals, use -cr
+
+	chindict -cr 你好
+	-----------------------------
+	你 radical:
+	Radical(人)
+
+	好 radical:
+	Radical(女)
+
+
 ### Python demo
 
 	from chin_dict.chindict import ChinDict

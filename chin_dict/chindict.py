@@ -38,6 +38,7 @@ class ChinDict:
                                  'numerical' or 'accented'")
                                  
         engine = create_engine('sqlite:///' + sys.prefix + '/data/hanlearn.db')        
+        engine = create_engine('sqlite:///chin_dict/hanlearn.db')        
         Session = sessionmaker(bind=engine, autoflush=False)
         
         self._session = Session()
@@ -65,7 +66,7 @@ class ChinDict:
 
         
         if len(char) > 1:
-            raise ValueError("Function only accepts single characters")
+            return MultipleChar(char, self)
         
         db_res = self._session.query(Character).filter_by(character=char).first()
 
