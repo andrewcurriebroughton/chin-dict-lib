@@ -38,7 +38,6 @@ class ChinDict:
                                  'numerical' or 'accented'")
                                  
         engine = create_engine('sqlite:///' + sys.prefix + '/data/hanlearn.db')        
-        engine = create_engine('sqlite:///chin_dict/hanlearn.db')        
         Session = sessionmaker(bind=engine, autoflush=False)
         
         self._session = Session()

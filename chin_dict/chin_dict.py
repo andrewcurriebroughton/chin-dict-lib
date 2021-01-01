@@ -3,7 +3,7 @@
 from .chindict import ChinDict 
 import argparse
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 parser = argparse.ArgumentParser(description='Lookup character or word')
 parser.add_argument('character', type=str, help='Character to search')
