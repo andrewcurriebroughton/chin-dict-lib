@@ -27,7 +27,7 @@ class ChinDict:
     """
 
     
-    def __init__(self, charset='simplified', pinyin_style='numerical'):
+    def __init__(self, charset='simplified', pinyin_style='numerical', db_path='sqlite:///' + sys.prefix + '/data/hanlearn.db'):
         
         if charset not in ('simplified', 'traditional'):
             raise AttributeError("charset must be either \
@@ -37,7 +37,7 @@ class ChinDict:
             raise AttributeError("pinyin_style must be either \
                                  'numerical' or 'accented'")
                                  
-        engine = create_engine('sqlite:///' + sys.prefix + '/data/hanlearn.db')        
+        engine = create_engine(db_path)
         Session = sessionmaker(bind=engine, autoflush=False)
         
         self._session = Session()
