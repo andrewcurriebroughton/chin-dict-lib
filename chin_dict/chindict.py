@@ -37,7 +37,7 @@ class ChinDict:
             raise AttributeError("pinyin_style must be either \
                                  'numerical' or 'accented'")
                                  
-        engine = create_engine(db_path)
+        engine = create_engine('sqlite:///' + db_path)
         Session = sessionmaker(bind=engine, autoflush=False)
         
         self._session = Session()
